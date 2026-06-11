@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-12 col-md-6">
+    <div class="card mt-3">
+      <div class="card-body">
+        <b>Reference:</b> {{reference}}<br>
+        <b>Position:</b> {{decimal(toNumber(position))}}<br>
+        <b>Reference allele:</b> {{ref}}<br>
+        <b>Alternate allele:</b> {{alt}}<br>
+      </div>
+    </div>
+
+    {{if minimal == false}}
+    <div class="card mt-3">
+      <div class="card-header">
+        Haplogroup Frequencies
+      </div>
+      <div class="card-body">
+        <b>Haplogroup Defining:</b> Yes<br><br>
+        <b>myOrigins 3.0:</b><br>
+        {{if annotations.hapFreqs != null}}
+        {{for item in fromJson(annotations.hapFreqs)}}
+        {{if toNumber(item[1]) > 0}}
+        {{item[0]}} ({{formatNumber(toNumber(item[1]))}})
+        <div class="progress" style="height: 5px; margin-bottom: 8px;">
+          <div role="progressbar" aria-valuenow="{{item[1]}}" aria-valuemax="1" class="progress-bar" style="width: {{toNumber(item[1]) * 100}}%;">
+          </div>
+        </div>
+        {{end}}
+        {{end}}
+        {{else}}
+        <i>Variant not available</i>
+        {{end}}
+        <div class="text-right" style="margin-top: 5px;">
+          <small>Source: Maier et al. (2021), myOrigins 3.0, <a href="https://blog.familytreedna.com/wp-content/uploads/2021/08/myOrigins_3_WhitePaper.pdf" target="_blank">FamilyTreeDNA White Paper</a></small>
+        </div>
+      </div>
+    </div>
+    {{end}}
+  </div>
+
+  <div class="col-12 col-md-6">
+    <div class="card mt-3">
+      <div class="card-header">
+        Population Frequencies
+      </div>
+      <div class="card-body">
+        {{if annotations.popFreq != null}}
+        {{for item in fromJson(annotations.popFreq)}}
+        {{population = tree.getPopulationById(item[0])}}
+        {{population.getLabel()}} ({{formatNumber(toNumber(item[1]))}})
+        <div class="progress" style="height: 5px; margin-bottom: 15px;">
+          <div role="progressbar" aria-valuenow="{{item[1]}}" aria-valuemax="1" class="progress-bar" style="width: {{toNumber(item[1]) * 100}}%; background-color: {{population.getColor()}}">
+          </div>
+        </div>
+        {{end}}
+        {{else}}
+        <i>Variant not available</i>
+        {{end}}
+        <div class="text-right" style="margin-top: 5px;">
+          <small>Source: Maier et al. (2021), myOrigins 3.0, <a href="https://blog.familytreedna.com/wp-content/uploads/2021/08/myOrigins_3_WhitePaper.pdf" target="_blank">FamilyTreeDNA White Paper</a></small>
+        </div>
+      </div>
+    </div>
+    <div class="card mt-3">
+      <div class="card-header">
+        External Resources
+      </div>
+      <div class="card-body">
+        <a href="https://www.mitovisualize.org/variant/M-{{position}}-{{ref}}-{{alt}}" target="_blank">MitoVisualize</a><br>
+        <a href="https://mitomap.org/cgi-bin/search_allele?variant={{position}}{{ref}}>{{alt}}" target="_blank">Mitomap</a><br>
+      </div>
+    </div>
+  </div>
+</div>

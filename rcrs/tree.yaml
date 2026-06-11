@@ -85,6 +85,279 @@ genes:
  - "TRNT"
  - "TRNP"
 source:
-  - "Weissensteiner H, Pacher D, Kloss-Brandstätter A, Forer L, Specht G, Bandelt HJ, Kronenberg F, Salas A, Schönherr S. HaploGrep 2: mitochondrial haplogroup classification in the era of high-throughput sequencing. Nucleic Acids Res. 2016 Jul 8;44(W1):W58-63. doi: 10.1093/nar/gkw233. Epub 2016 Apr 15. PMID: 27084951; PMCID: PMC4987869."
-  - "Maier PA, Runfeldt G, Estes RJ, Vilar MG. African mitochondrial haplogroup L7: a 100,000-year-old maternal human lineage discovered through reassessment and new sequencing. Sci Rep. 2022 Jun 24;12:10747. doi: 10.1038/s41598-022-13856-0. PMID: 35750688; PMCID: PMC9232647."
   - "Maier PA, Runfeldt G, Estes RJ, Goloboff PA, Detsikas J, Burke AM, Sager MT, Vilar MG. Mitotree: the universal human mitochondrial reference phylogeny at 10× the resolution. bioRxiv. 2026 May 28:2026.05.28.728540. doi: 10.64898/2026.05.28.728540."
+  - "Maier PA, Runfeldt G, Estes RJ, Vilar MG. African mitochondrial haplogroup L7: a 100,000-year-old maternal human lineage discovered through reassessment and new sequencing. Sci Rep. 2022 Jun 24;12:10747. doi: 10.1038/s41598-022-13856-0. PMID: 35750688; PMCID: PMC9232647."
+  - "Schönherr S, Weissensteiner H, Kronenberg F, Forer L. Haplogrep 3 - an interactive haplogroup classification and analysis platform. Nucleic Acids Res. 2023. doi: 10.1093/nar/gkad284. PMID: 37070190; PMCID: PMC10320078."
+
+populations:
+  - id: "Africa"
+    label: "Africa"
+    color: "#EA0389"
+  - id: "Americas"
+    label: "Americas"
+    color: "#FFB245"
+  - id: "Arctic"
+    label: "Arctic"
+    color: "#00ABCB"
+  - id: "Asia"
+    label: "Asia"
+    color: "#F6921E"
+  - id: "Europe"
+    label: "Europe"
+    color: "#9791BD"
+  - id: "MiddleEast"
+    label: "Middle East"
+    color: "#CCB90F"
+  - id: "Oceanic"
+    label: "Oceania"
+    color: "#19B158"
+
+clusters:
+  - label: "A"
+    color: "#66C9F2"
+    frequencies:
+      Africa: 0.03
+      Americas: 0.24
+      Asia: 0.05
+      Europe: 0.63
+      MiddleEast: 0.05
+  - label: "B"
+    color: "#FFCCFF"
+    frequencies:
+      Africa: 0.03
+      Americas: 0.2
+      Asia: 0.19
+      Europe: 0.51
+      MiddleEast: 0.04
+      Oceanic: 0.03
+  - label: "C"
+    color: "#FFB245"
+    frequencies:
+      Africa: 0.03
+      Americas: 0.21
+      Asia: 0.05
+      Europe: 0.66
+      MiddleEast: 0.06
+  - label: "D"
+    color: "#00734B"
+    frequencies:
+      Africa: 0.02
+      Americas: 0.12
+      Asia: 0.34
+      Europe: 0.46
+      MiddleEast: 0.06
+  - label: "E"
+    color: "#3D5AFE"
+    frequencies:
+      Africa: 0.04
+      Asia: 0.64
+      Europe: 0.27
+      MiddleEast: 0.03
+      Oceanic: 0.01
+  - label: "F"
+    color: "#FF0080"
+    frequencies:
+      Africa: 0.02
+      Asia: 0.74
+      Europe: 0.2
+      MiddleEast: 0.04
+  - label: "G"
+    color: "#19B158"
+    frequencies:
+      Africa: 0.01
+      Asia: 0.55
+      Europe: 0.36
+      MiddleEast: 0.09
+  - label: "H"
+    color: "#7A6E56"
+    frequencies:
+      Europe: 0.95
+      MiddleEast: 0.04
+  - label: "HV"
+    color: "#B3988F"
+    frequencies:
+      Africa: 0.01
+      Asia: 0.03
+      Europe: 0.83
+      MiddleEast: 0.13
+  - label: "I"
+    color: "#00ABCB"
+    frequencies:
+      Asia: 0.01
+      Europe: 0.94
+      MiddleEast: 0.04
+  - label: "J"
+    color: "#660099"
+    frequencies:
+      Africa: 0.01
+      Asia: 0.01
+      Europe: 0.91
+      MiddleEast: 0.08
+  - label: "K"
+    color: "#95639E"
+    frequencies:
+      Europe: 0.94
+      MiddleEast: 0.05
+  - label: "L0"
+    color: "#EA0389"
+    frequencies:
+      Africa: 0.45
+      Americas: 0.02
+      Asia: 0.04
+      Europe: 0.34
+      MiddleEast: 0.16
+  - label: "L1"
+    color: "#E04243"
+    frequencies:
+      Africa: 0.54
+      Americas: 0.02
+      Asia: 0.01
+      Europe: 0.36
+      MiddleEast: 0.06
+  - label: "L2"
+    color: "#FDC15C"
+    frequencies:
+      Africa: 0.52
+      Americas: 0.02
+      Asia: 0.01
+      Europe: 0.34
+      MiddleEast: 0.1
+  - label: "L3"
+    color: "#AF271F"
+    frequencies:
+      Africa: 0.54
+      Americas: 0.02
+      Asia: 0.01
+      Europe: 0.33
+      MiddleEast: 0.09
+  - label: "L4"
+    color: "#00CAC2"
+    frequencies:
+      Africa: 0.43
+      Asia: 0.03
+      Europe: 0.22
+      MiddleEast: 0.32
+  - label: "L5"
+    color: "#F3556C"
+    frequencies:
+      Africa: 0.31
+      Asia: 0.02
+      Europe: 0.01
+      MiddleEast: 0.66
+  - label: "L6"
+    color: "#00A6DA"
+    frequencies:
+      Africa: 0.37
+      Asia: 0.02
+      Europe: 0.01
+      MiddleEast: 0.6
+  - label: "L7"
+    color: "#FFA193"
+    frequencies:
+      Africa: 0.41
+      Asia: 0.04
+      Europe: 0.1
+      MiddleEast: 0.46
+  - label: "M"
+    color: "#F6921E"
+    frequencies:
+      Africa: 0.04
+      Asia: 0.56
+      Europe: 0.27
+      MiddleEast: 0.13
+  - label: "N"
+    color: "#015353"
+    frequencies:
+      Africa: 0.01
+      Asia: 0.12
+      Europe: 0.67
+      MiddleEast: 0.2
+  - label: "O"
+    color: "#689F33"
+    frequencies:
+      Asia: 0.23
+      Europe: 0.68
+      MiddleEast: 0.08
+      Oceanic: 0.01
+  - label: "P"
+    color: "#FDD834"
+    frequencies:
+      Asia: 0.24
+      Europe: 0.65
+      Oceanic: 0.1
+  - label: "Q"
+    color: "#36EBFF"
+    frequencies:
+      Asia: 0.49
+      Europe: 0.3
+      MiddleEast: 0.01
+      Oceanic: 0.2
+  - label: "R"
+    color: "#666666"
+    frequencies:
+      Africa: 0.03
+      Asia: 0.2
+      Europe: 0.36
+      MiddleEast: 0.4
+  - label: "S"
+    color: "#924E76"
+    frequencies:
+      Asia: 0.09
+      Europe: 0.86
+      Oceanic: 0.05
+  - label: "T"
+    color: "#CCB90F"
+    frequencies:
+      Asia: 0.01
+      Europe: 0.92
+      MiddleEast: 0.06
+  - label: "U"
+    color: "#9791BD"
+    frequencies:
+      Africa: 0.01
+      Asia: 0.02
+      Europe: 0.91
+      MiddleEast: 0.07
+  - label: "V"
+    color: "#716558"
+    frequencies:
+      Europe: 0.97
+      MiddleEast: 0.02
+  - label: "W"
+    color: "#008AC7"
+    frequencies:
+      Asia: 0.02
+      Europe: 0.93
+      MiddleEast: 0.05
+  - label: "X"
+    color: "#939598"
+    frequencies:
+      Africa: 0.01
+      Americas: 0.01
+      Asia: 0.01
+      Europe: 0.89
+      MiddleEast: 0.09
+  - label: "Y"
+    color: "#551513"
+    frequencies:
+      Asia: 0.58
+      Europe: 0.34
+      MiddleEast: 0.08
+  - label: "Z"
+    color: "#9664A0"
+    frequencies:
+      Asia: 0.29
+      Europe: 0.68
+      MiddleEast: 0.04
+
+template: annotations/template.html
+annotations:
+  - filename: annotations/myorigins.frequencies.txt.gz
+    refAllele: Ref
+    altAllele: Alt
+    chr: chrM
+    properties:
+      - name: hapFreqs
+        column: hapFreqs
+      - name: popFreq
+        column: popFreq

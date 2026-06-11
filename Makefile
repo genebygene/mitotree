@@ -8,9 +8,9 @@ help:
 
 copy:
 	mkdir -p rsrs
-	cp -v ../trees/mitotree-rsrs/$(VERSION)/* rsrs/
+	cp -rv ../trees/mitotree-rsrs/$(VERSION)/* rsrs/
 	mkdir -p rcrs
-	cp -v ../trees/mitotree-rcrs/$(VERSION)/* rcrs/
+	cp -rv ../trees/mitotree-rcrs/$(VERSION)/* rcrs/
 
 build:
 	mkdir -p dist
