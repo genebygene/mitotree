@@ -170,6 +170,9 @@ clusters:
       MiddleEast: 0.09
   - label: "H"
     color: "#7A6E56"
+    nodes:
+      - "H"
+      - "H2a2a1"
     frequencies:
       Europe: 0.95
       MiddleEast: 0.04
